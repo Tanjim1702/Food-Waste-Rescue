@@ -1,0 +1,494 @@
+
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #26352b;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+
+
+/* Hero section */
+.hero {
+    background: linear-gradient(135deg, #e5f3e7, #d4e9d8);
+    padding: 70px 20px;
+}
+
+
+
+
+
+.hero h1 {
+    color: #237744;
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.8px;
+    margin-bottom: 24px;
+}
+
+
+
+.hero p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    max-width: 520px;
+    margin: 0 0 30px;
+    color: #526257;
+}
+
+
+
+
+/* Green buttons */
+.btn-success {
+    background-color: #278348;
+    border-color: #278348;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.btn-success:hover {
+    background-color: #1f6538;
+    border-color: #1f6538;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(31, 101, 56, 0.2);
+}
+
+
+/* Section headings */
+h2 {
+    color: #237744;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #1f5d37;
+    color: white;
+}
+
+
+/* Mobile-friendly spacing */
+@media (max-width: 576px) {
+    .hero {
+        padding: 50px 15px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .btn {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Food listing cards */
+.food-card {
+    border: none;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+}
+
+.food-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.food-card .card-title {
+    color: #237744;
+    font-weight: bold;
+}
+
+.food-card .card-body {
+    padding: 22px;
+}
+
+
+/* Task 4.0: Improve food card appearance */
+.food-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+.food-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(35, 119, 68, 0.14);
+}
+
+
+/* Task 4.1: Improve View Details buttons */
+.view-details-btn {
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-weight: 500;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+
+.view-details-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(25, 135, 84, 0.25);
+}
+
+
+/* Task 4.2: Improve food card content spacing */
+.food-card .card-body {
+    padding: 22px;
+}
+
+.food-card .card-title {
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+
+.food-card .card-text {
+    line-height: 1.7;
+    color: #526257;
+    font-size: 0.95rem;
+}
+
+
+.food-card .badge {
+    padding: 7px 10px;
+    border-radius: 6px;
+}
+
+/* Task 4.3: Keep food cards consistent in height */
+.food-card {
+    height: 100%;
+}
+
+.food-card .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.food-card .view-details-btn {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+/* Task 4.5: Improve food section heading */
+
+#food h2 {
+    font-weight: 700;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    margin-bottom: 12px;
+    letter-spacing: -0.4px;
+}
+
+
+#food {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* Task 4.6: Improve food search bar */
+#foodSearch {
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    padding: 12px 16px;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+#foodSearch:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 3px rgba(25, 135, 84, 0.15);
+    outline: none;
+}
+
+/* Task 4.7: Improve category filter buttons */
+.category-btn {
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin: 4px;
+    transition: all 0.2s ease;
+}
+
+.category-btn:hover {
+    transform: translateY(-2px);
+}
+
+.category-btn.active {
+    box-shadow: 0 3px 8px rgba(25, 135, 84, 0.2);
+}
+
+/* Task 4.8: Improve food details modal */
+#foodDetailsModal .modal-content {
+    border: none;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+#foodDetailsModal .modal-header {
+    background-color: #198754;
+    color: white;
+    border-bottom: none;
+}
+
+#foodDetailsModal .modal-header .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+#foodDetailsModal .modal-body {
+    padding: 24px;
+}
+
+#foodDetailsModal .modal-footer {
+    border-top: 1px solid #eeeeee;
+}
+
+/* Task 4.9: Improve donation information readability */
+.food-card .card-body p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.food-card .card-body .text-muted {
+    font-size: 0.92rem;
+}
+
+.food-card .card-body .fw-bold {
+    color: #198754;
+    font-size: 1.05rem;
+}
+
+/* Task 5: Improve navigation links */
+.navbar .nav-link {
+    transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #278348;
+}
+
+/* Task 7: Style the statistics section */
+.stats-section {
+    background-color: #edf7ee;
+}
+
+.stats-section h3 {
+    color: #237744;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.stats-section p {
+    color: #526257;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+/* Task 8: Improve the About section */
+#about {
+    padding-top: 65px !important;
+    padding-bottom: 65px !important;
+}
+
+#about p {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #526257;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Task 13: Improve form fields */
+.form-control,
+.form-select {
+    border-radius: 10px;
+    border-color: #d5dfd7;
+    padding: 11px 14px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #278348;
+    box-shadow: 0 0 0 3px rgba(39, 131, 72, 0.12);
+}
+/* Task 14: Improve donation form button */
+#donationForm button[type="submit"] {
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+#donationForm button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(31, 101, 56, 0.2);
+}
+
+#donationForm button[type="submit"]:active {
+    transform: translateY(0);
+}
+/* Task 15: Style the donation form container */
+#donationForm {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+/* Task 16: Improve donation page heading */
+body h1 {
+    color: #237744;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+/* Task 17: Soft page background */
+body {
+    background-color: #f8fbf8;
+}
+/* Task 18: Improve donation form on mobile */
+@media (max-width: 576px) {
+    #donationForm {
+        padding: 18px;
+        border-radius: 12px;
+    }
+
+    #donationForm button[type="submit"] {
+        width: 100%;
+    }
+}
+/* Task 19: Improve donation page spacing */
+#donationForm {
+    margin-bottom: 30px;
+}
+
+#donationForm label {
+    color: #34483a;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+/* Task 20: Improve donation form messages */
+#donationMessage {
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+/* Task 21: Improve donation alert colors */
+#donationMessage.alert-success {
+    background-color: #edf7ee;
+    color: #1f6538;
+    border: 1px solid #cce5d2;
+}
+
+#donationMessage.alert-danger {
+    background-color: #fff1f0;
+    color: #a52834;
+    border: 1px solid #f1c7c9;
+}
+/* Task 22: Improve donation page heading spacing */
+body h1 {
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+#donationForm h2 {
+    margin-bottom: 18px;
+}
+/* Task 23: Improve spacing between form fields */
+#donationForm .mb-3 {
+    margin-bottom: 20px !important;
+}
+
+#donationForm input,
+#donationForm select,
+#donationForm textarea {
+    width: 100%;
+}
+/* Task 24: Improve form label spacing */
+#donationForm label {
+    display: block;
+    text-align: left;
+}
+
+#donationForm input:focus,
+#donationForm select:focus,
+#donationForm textarea:focus {
+    outline: none;
+}
+
+/* Hero food image */
+.hero-image {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(31, 101, 56, 0.16);
+}
+
+/* Hero image on mobile screens */
+@media (max-width: 767px) {
+    .hero-image {
+        height: 250px;
+    }
+}
+
+/* Align hero content to match the UI design */
+.hero {
+    text-align: left;
+}
+
+.hero p {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Improve hero section spacing */
+.hero .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.hero h1 {
+    margin-bottom: 24px;
+}
+
+.hero .btn {
+    margin-top: 8px;
+}
+
+
+/* Rounded hero buttons */
+.hero .btn {
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+.hero-image {
+    transition: transform 0.25s ease;
+}
+
+.hero-image:hover {
+    transform: translateY(-4px);
+}
